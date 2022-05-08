@@ -40,7 +40,13 @@ let weather = {
         this.api +
         units
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          alert("Location Unavailable");
+        }
+      })
       .then((data) => this.setWeather(data));
   },
 
