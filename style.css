@@ -1,0 +1,30 @@
+.searchContainer {
+  border: 1px solid blue;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchBarContainer {
+  border: 1px solid pink;
+}
+
+.weatherContainer {
+  border: 1px solid red;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 10%;
+  width: 10%;
+}
+
+.locationContainer {
+  border: 1px solid orange;
+}
+
+.tempContainer {
+  border: 1px solid brown;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="weather.js" defer></script>
+    <title>Weather Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="searchContainer">
+            <h1>Weather</h1>
+            <div class="searchBarContainer">
+                <input type="text" class="searchBar" placeholder="Enter a location" />
+                <button class="searchButton" id="searchButton">Search</button>
+            </div>
+            <div class="unitContainer">
+                <button class="celcius">Celcius</button>
+                <button class="fahrenheit">Fahrenheit</button>
+                <button class="kelvin">Kelvin</button>
+            </div>
+        </div>
+        <div class="weatherContainer">
+            <img src="" alt="Weather Icon" class="icon" />
+            <div class="tempContainer">
+                <h2 class="currentTemp">23</h2>
+                <h3 class="maxTemp">30</h3>
+            </div>
+            <div class="additionalInfoContainer">
+                <div class="humidity">70%</div>
+                <div class="windSpeed">4mph</div>
+            </div>
+            <div class="locationContainer">
+                <h1 class="location">London</h1>
+                <h3 class="lon">lon</h3>
+                <h3 class="lat">lat</h3>
+                <h3 class="desc">bla bla bla</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
