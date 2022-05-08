@@ -8,14 +8,17 @@ const kelvinButton = document.querySelector(".kelvin");
 
 celciusButton.addEventListener("click", () => {
   units = "&units=metric";
+  weather.search();
 });
 
 fahrenheitButton.addEventListener("click", () => {
   units = "&units=imperial";
+  weather.search();
 });
 
 kelvinButton.addEventListener("click", () => {
   units = "";
+  weather.search();
 });
 
 let weather = {
@@ -64,4 +67,10 @@ let weather = {
 
 document.querySelector(".searchButton").addEventListener("click", function () {
   weather.search();
+});
+
+document.querySelector(".searchBar").addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    weather.search();
+  }
 });
