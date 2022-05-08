@@ -28,3 +28,8 @@
 .tempContainer {
   border: 1px solid brown;
 }
+
+.desc,
+.location {
+  text-transform: capitalize;
+}

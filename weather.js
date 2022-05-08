@@ -1,3 +1,4 @@
+//set defaults to metric
 let windSpeedUnit = "m/s";
 let tempUnit = "°C";
 let units = "&units=metric";
@@ -6,18 +7,25 @@ const celciusButton = document.querySelector(".celcius");
 const fahrenheitButton = document.querySelector(".fahrenheit");
 const kelvinButton = document.querySelector(".kelvin");
 
+//event listeners for changing units
 celciusButton.addEventListener("click", () => {
   units = "&units=metric";
+  windSpeedUnit = "m/s";
+  tempUnit = "°C";
   weather.search();
 });
 
 fahrenheitButton.addEventListener("click", () => {
   units = "&units=imperial";
+  windSpeedUnit = "mph";
+  tempUnit = "°F";
   weather.search();
 });
 
 kelvinButton.addEventListener("click", () => {
   units = "";
+  tempUnit = "°K";
+  windSpeedUnit = "m/s";
   weather.search();
 });
 
@@ -60,17 +68,24 @@ let weather = {
       "Wind speed: " + speed + " " + windSpeedUnit;
   },
 
+  //search input from searchbar
   search: function () {
     this.getWeather(document.querySelector(".searchBar").value, units);
   },
 };
 
+//on search button click
 document.querySelector(".searchButton").addEventListener("click", function () {
   weather.search();
 });
 
+//on keyboard enter key
 document.querySelector(".searchBar").addEventListener("keyup", function (e) {
   if (e.key == "Enter") {
     weather.search();
   }
 });
+
+// if (window.navigator.geolocation) {
+//   window.navigator.geolocation.getCurrentPosition(console.log, console.log);
+// }
